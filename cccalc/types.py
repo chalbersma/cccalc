@@ -53,8 +53,8 @@ class Fill(object):
         return _total
 
     def __repr__(self):
-        return 'Fill<%s %0.8f %s for %0.8f%s (total) @ %s>' % (str(self.side), self.size, self.size_unit, self.total,
-                                                         self.price_unit, self.timestamp)
+        fmt_total = ('%0.2f %s' % (self.total, self.price_unit)).ljust(12)
+        return '%s %0.8f %s for %s @ %s' % (self.side.__name__, self.size, self.size_unit, fmt_total, self.timestamp)
 
     @property
     def credit(self):
