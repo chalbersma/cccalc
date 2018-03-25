@@ -30,4 +30,4 @@ if __name__ == '__main__':
         total_size += fill.size
 
     print('Total credit: %0.8f' % credit)
-    #print('Total size (mixed products possible (warning!!!)): %0.8f' % total_size)
+    print('Total size (warning: only useful if all products and sides are the same): %0.8f' % total_size)
