@@ -11,3 +11,10 @@ def parse(filehandle):
     """
     for row in csv.DictReader(filehandle):
         yield cccalc.types.Fill(row)
+
+
+def parse_cost_basis(filehandle, size_unit, cost_unit, basis_method):
+    cbq = cccalc.types.CostBasisQueue(size_unit, cost_unit, basis_method)
+    cbq.load(filehandle)
+
+    return cbq
