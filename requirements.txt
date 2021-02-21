@@ -1,2 +1,3 @@
 isodate
 pytz
+capital-gains==1.0.7
